@@ -185,8 +185,8 @@ public class SE311_Week12Visitor {
         Employees employees = new Employees();
 
         employees.add(new Clerk("Senol Güneş", 20000, 10));
-        employees.add(new Clerk("Umut Güner", 30000, 20));
-        employees.add(new Clerk("Fikret Orman", 40000, 30));
+        employees.add(new Director("Umut Güner", 30000, 20));
+        employees.add(new President("Fikret Orman", 40000, 30));
 
         employees.displayInfos();
         employees.AcceptVisitors(new IncomeVisitor());
