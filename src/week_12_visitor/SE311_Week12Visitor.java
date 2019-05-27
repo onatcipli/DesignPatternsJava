@@ -179,8 +179,6 @@ class Employees {
 public class SE311_Week12Visitor {
 
     public static void main(String[] args) {
-        // write your code here
-        System.out.println("SE311_Week12Visitor !!");
 
         Employees employees = new Employees();
 

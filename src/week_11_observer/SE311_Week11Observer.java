@@ -89,7 +89,6 @@ public class SE311_Week11Observer {
 
     public static void main(String[] args) {
 
-        System.out.println("SE311_Week3Iterator !!");
         Stock ibmStcok = new IBM("IBM", 2000);
 
         Investor onat = new Investor("onat");
