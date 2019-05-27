@@ -1,16 +1,21 @@
-package week_06_factory;
+package week_06_abstract_factory;
 
-public class SE311_Week06Factory {
+public class SE311_Week06AbstractFactory {
 
     public static void main(String[] args) {
 
         PhoneCreator appleCreator = new AppleCreator();
+        PhoneCreator samsungCreator = new SamsungCreator();
 
         appleCreator.createPhone();
 
+        samsungCreator.createPhone();
     }
 }
 
+/**
+ * Abstract Factory
+ */
 abstract class PhoneCreator {
     /**
      * Factory Method, let subclasses decide which class to instantiate
@@ -49,6 +54,19 @@ class AppleCreator extends PhoneCreator {
     }
 }
 
+class SamsungCreator extends PhoneCreator {
+
+    @Override
+    Screen createScreen() {
+        return new SamsungScreen();
+    }
+
+    @Override
+    Processor createProcessor() {
+        return new SamsungProcessor();
+    }
+}
+
 /**
  * Product one
  */
@@ -61,6 +79,12 @@ class AppleProcessor implements Processor {
     }
 }
 
+class SamsungProcessor implements Processor {
+    SamsungProcessor() {
+        System.out.println("SamsungProcessor created!!");
+    }
+}
+
 interface Screen {
 }
 
@@ -70,3 +94,8 @@ class AppleScreen implements Screen {
     }
 }
 
+class SamsungScreen implements Screen {
+    SamsungScreen() {
+        System.out.println("SamsungScreen created!!");
+    }
+}
