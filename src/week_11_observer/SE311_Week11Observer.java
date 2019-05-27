@@ -53,7 +53,7 @@ abstract class Stock {
 }
 
 /**
- * Generic type for Observable classes
+ * Generic type for Observers
  * it includes update method, when Subject state change, it notify every observers with update method.
  */
 interface Observer {
