@@ -1,6 +1,6 @@
 package week_07_facade;
 
-public class SE311_Week08Facade {
+public class SE311_Week07Facade {
 
     public static void main(String[] args) {
 
